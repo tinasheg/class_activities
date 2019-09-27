@@ -1,0 +1,26 @@
+title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: cornflowerblue;
+}
+
+.main-heading {
+    font-size: 28px;
+    font-weight: bolder;
+    font-family: 'Vibes', cursive;
+}
+
+.first {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.first:hover {
+    background-color: aquamarine;
+}
+
+a:hover {
+    color: chocolate;
+}
+
+a:visited {
+    font-stretch: extra-expanded;
+}
