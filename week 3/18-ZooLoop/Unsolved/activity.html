@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<script>
+
+var myFarm = ['chickens', 'pigs', 'cows', 'horses', 'ostriches'];
+
+// myFarm.forEach(element => {
+//     console.log(element);
+// });
+
+for (let index = 0; index < myFarm.length; index++) {
+    const element = myFarm[index];
+    console.log(element);
+    
+    if (element[0] === 'c' || element[0] === 'o') {
+        alert(element+ " Begins with a c or o");
+    }
+}
+
+</script>
+</html>

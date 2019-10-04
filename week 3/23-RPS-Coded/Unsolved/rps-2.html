@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors Part 2
+  </title>
+</head>
+
+<body>
+
+  <div id="game"></div>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var computerChoices = ["r", "p", "s"];
+    let wins = 0;
+    let losses = 0;
+    let ties = 0;
+    const gameDiv = document.getElementById("game");
+
+    // This function is run whenever the user presses a key.
+    document.onkeyup = function(event) {
+
+      // Determines which key was pressed.
+      var userGuess = event.key;
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+      // Alerts the key the user pressed (userGuess).
+      // alert("User guess: " + userGuess);
+
+      // Alerts the Computer's guess.
+      // alert("Computer guess: " + computerGuess);
+
+      if (userGuess === 'p' || userGuess === 'r' || userGuess === 's') {
+          // logic for game
+                if (userGuess === computerGuess) {
+                    ties++;
+                } else if (userGuess === "r" && computerGuess === "p") {
+                    // user loss
+                    losses++;
+                } else if (userGuess === "r" && computerGuess === "s") {
+                    // user wins
+                    wins++;
+                } else if (userGuess === "p" && computerGuess === "r") {
+                    // user wins
+                    wins++;
+                } else if (userGuess === "p" && computerGuess === "s") {
+                    // user loss
+                    losses++;
+                } else if (userGuess === "s" && computerGuess === "p") {
+                    // user wins
+                    wins++;
+                } else if (userGuess === "s" && computerGuess === "r") {
+                    // user loss
+                    losses++;
+                }
+                console.log('user', userGuess, 'computer', computerGuess);
+                // print current scores
+                console.log("wins:", wins)
+                console.log("losses:", losses)
+                console.log("ties:", ties)
+
+    gameDiv.innerHTML = "<h2>User Guessed: " + userGuess + "</h2>";
+    gameDiv.innerHTML += "<h2>Computer Guessed: " + computerGuess + "</h2>";
+    gameDiv.innerHTML += "<h2>Wins " + wins + "</h2>";
+    gameDiv.innerHTML += "<h2>Losses " + losses + "</h2>";
+    gameDiv.innerHTML += "<h2>Ties " + ties + "</h2>";
+
+
+      }
+
+    };
+  </script>
+
+</body>
+
+</html>
