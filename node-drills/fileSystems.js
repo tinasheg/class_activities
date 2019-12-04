@@ -14,3 +14,4 @@ fs.readFile('best_thing_ever.txt', 'utf8', function(err, data) {
     }
     console.log(data.split(', '))
 })
+
