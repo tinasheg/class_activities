@@ -12,7 +12,7 @@ var weather = require("weather-js");
 // Replace with your mapquest consumer API key
 var options = {
   provider: "mapquest",
-  apiKey: "YOUR-MAPQUEST-API-CONSUMER-KEY"
+  apiKey: "Q9dPCN00WeWSMfHAlWBNOzBborF80HKb"
 };
 
 var geocoder = NodeGeocoder(options);
@@ -47,7 +47,7 @@ geocoder.geocode(address, function(err, data) {
   }
 
   // Run the weather package to search by either zip or city.
-  weather.find({ search: search, degreeType: "F" }, function(err, result) {
+  weather.find({ search: search, degreeType: "C" }, function(err, result) {
     // If there is insufficient data, notify the user.
     if (err) {
       console.log("\r\n\r\n\r\n");
