@@ -25,10 +25,26 @@ var geocoder = NodeGeocoder(options);
 
 // Take in the command line arguments
 
-
+var input = process.argv.slice(2);
 
 // Build your address as an array or string
-
+var address = input.join(' ');
 
 
 // Then use the geocoder object to search the address
+geocoder.geocode(address, function(err, res) {
+  console.log(JSON.stringify(res,null,2));
+})
+
+// Promise way
+
+const geocodeInfo = async function(address){
+  try {
+    const res = await geocoder.geocode(address);    
+    console.log(JSON.stringify(res, null, 2));
+  } catch(e) {
+    console.log(e);
+  }
+}
+
+geocodeInfo(address);
