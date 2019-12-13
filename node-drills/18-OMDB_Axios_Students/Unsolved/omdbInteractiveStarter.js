@@ -28,7 +28,7 @@ console.log(queryUrl);
 // ...
 axios.get(queryUrl).then(
    function(response) {
-       console.log('Movie release year is:' + response.)
+       console.log('Movie release year is:' + response.year)
    }
 )
 // If the request with axios is successful
