@@ -31,7 +31,7 @@ module.exports = function(app) {
 
     db.Todo.create({
       text: req.body.text,
-      complete: req.body.complete
+      complete: false
     }).then(function(results) {
       // `results` here would be the newly created chirp
       res.end();
