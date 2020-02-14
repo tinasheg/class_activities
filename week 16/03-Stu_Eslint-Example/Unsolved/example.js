@@ -8,7 +8,7 @@ var operation = prompt("What would you like to do? (add, subtract, multiply, div
 if (operation === "ADD") {
   result = num_1 + num_2;
   alert("The sum of " + num_1 + " and " + num_2 + " is " + result);
-} else if ( operation === "SUBTRACT") {
+} else if (operation === "SUBTRACT") {
   result = num_1 - num_2;
   alert("The difference between " + num_1 + " and " + num_2 + " is " + result);
 } else if (operation === "MULTIPLY") {
