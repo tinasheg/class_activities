@@ -9,7 +9,7 @@
   "author": "me",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.21.2",
+    "axios": "^1.8.2",
     "underscore": "^1.12.1"
   }
 }
